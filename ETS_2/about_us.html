@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" href="images/logo.png" type="ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>
+        Euro Truck Simulator 2
+      </title>
+      <link rel='stylesheet' href='css/style.css'>
+    </head>
+  <body class="light">
+    <button id="theme-toggle" style="position: absolute; bottom: 50px; right: 40px">Сменить тему</button>
+    <script src="script.js"></script>
+    <main>
+      <section>
+        <button id="button" style="position: absolute; left: 180px; top: 90px;" ><a href="index.html" >Главная</a> </button>
+        <button id="myBtn" style="position: absolute; left: 270px; top: 90px;" > <a href="news.html" >Новости</a></button>
+        <button id="myBtn" style="position: absolute; left: 360px; top: 90px;" > <a href="about_us.html" >О нас</a></button>
+        <button id="button" style="position: absolute; left: 430px; top: 90px;" ><a href="form.html" >Обратная связь</a> </button>
+        <button id="button" style="position: absolute; left: 560px; top: 90px;" ><a href="quest.html" >FAQ</a> </button>
+        <button id="button" style="position: absolute; left: 620px; top: 90px;" ><a href="galery.html" >Галерея</a> </button>
+        <img id="Logo" src="images/logo.png" style="position: absolute; width: 100px; height: 100px; left: 33px; top: 40px;" title="Euro Truck Simulator 2" />
+        <h1 style="position: absolute; left: 50px; top: 140px;" >О нашей игре</h1>
+        <h2 style="position: absolute; top: 760px; left: 50px; width: 940px"  >Наша студия занимается разработкой игры Euro Truck Sumelator 2, в которой игрок доставляет грузу по странам Европы.</h2>
+        <img src="images/screen6.png" style="position: absolute; left: 50px; top: 220px; width: 960px; height: 540px " alt="Изображение из игры">
+        <iframe style="position: absolute; right: 350px; top: 120px;" width="768" height="432" src="videos/Trailer1.mp4"></iframe>
+        <iframe style="position: absolute; right: 350px; bottom: 160px;" width="768" height="432" src="videos/Trailer2.mp4"></iframe>
+      </section>
+    </main>
+    <footer>
+      <p style="position: absolute; bottom: 50px; left: 50px">&copy;Euro Truck Simulator 2025. Все права защищены.</p>
+      <p style="position: absolute; bottom: 20px; left: 50px">Связь с нами: SCS-help@scs.com</p>
+  </footer>
+  </body>
+  <script>
+    window.onload = function() {
+document.getElementById('Logo').classList.add('show');
+};  
+</script>
+</html>

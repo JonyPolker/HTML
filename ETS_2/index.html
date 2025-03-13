@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" href="images/logo.png" type="ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>
+        Euro Truck Simulator 2
+      </title>
+      <link rel='stylesheet' href='css/style.css'>
+      <title>Смена темы</title>
+  </head>
+  <body class="light">
+    <button id="theme-toggle" style="position: absolute; bottom: 50px; right: 40px">Сменить тему</button>
+    <script src="script.js"></script>
+    <main>
+      <section>
+        <button id="button" style="position: absolute; left: 180px; top: 90px;" ><a href="index.html" >Главная</a> </button>
+        <button id="button" style="position: absolute; left: 270px; top: 90px;" > <a href="news.html" >Новости</a></button>
+        <button id="button" style="position: absolute; left: 360px; top: 90px;" > <a href="about_us.html" >О нас</a></button>
+        <button id="button" style="position: absolute; left: 430px; top: 90px;" ><a href="form.html" >Обратная связь</a> </button>
+        <button id="button" style="position: absolute; left: 560px; top: 90px;" ><a href="quest.html" >FAQ</a> </button>
+        <button id="button" style="position: absolute; left: 620px; top: 90px;" ><a href="galery.html" >Галерея</a> </button>
+        <img id="Logo" src="images/logo.png" style="position: absolute; width: 100px; height: 100px; left: 33px; top: 40px;" title="Euro Truck Simulator 2" onclick="toggleDialog()" />
+        <div id="modal_container" style="display: none">
+          <div id="modal" style="position: absolute; left: 250px; bottom: 300px">
+              <span class="closebtn" onclick="toggleDialog()" style="color: rgb(0, 0, 0); font-size: 16px">&times;</span>
+              <p3 style="color: rgb(0, 0, 0); position: absolute; left: 20px; top: 50px">
+                Ну как там с деньгами?
+              </p3>
+          </div>
+      </div>
+        <h1 style="position: absolute; left: 180px; top: 110px">Добро пожаловать в мир игры!</h1>
+        <img src="images/screenshot1.png" alt="Скриншот" loading="lazy" style="position: absolute; left: 180px; top: 180px; width: 960px; height: 540px">
+      </section>
+    </main>
+    <footer>
+      <p style="position: absolute; bottom: 50px; left: 50px">&copy;Euro Truck Simulator 2025. Все права защищены.</p>
+      <p style="position: absolute; bottom: 20px; left: 50px">Связь с нами: SCS-help@scs.com</p>
+  </footer>
+  </body>
+  <script>
+    window.onload = function() {
+document.getElementById('Logo').classList.add('show');
+};  
+</script>
+</html>

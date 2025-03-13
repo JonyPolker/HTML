@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" href="images/logo.png" type="ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Euro Truck Simulator 2
+    </title>
+    <link rel='stylesheet' href='css/style.css'>
+      <title>Смена темы</title>
+  </head>
+  <body class="light">
+    <button id="theme-toggle" style="position: absolute; bottom: 50px; right: 40px">Сменить тему</button>
+    <script src="script.js"></script>
+    <main>
+      <section>
+        <button id="button" style="position: absolute; left: 180px; top: 90px;" ><a href="index.html" >Главная</a> </button>
+        <button id="myBtn" style="position: absolute; left: 270px; top: 90px;" > <a href="news.html" >Новости</a></button>
+        <button id="myBtn" style="position: absolute; left: 360px; top: 90px;" > <a href="about_us.html" >О нас</a></button>
+        <button id="button" style="position: absolute; left: 430px; top: 90px;" ><a href="form.html" >Обратная связь</a> </button>
+        <button id="button" style="position: absolute; left: 560px; top: 90px;" ><a href="quest.html" >FAQ</a> </button>
+        <button id="button" style="position: absolute; left: 620px; top: 90px;" ><a href="galery.html" >Галерея</a> </button>
+        <img id="Logo" src="images/logo.png" style="position: absolute; width: 100px; height: 100px; left: 33px; top: 40px;" title="Euro Truck Simulator 2" onclick="toggleDialog()" />
+        <div id="modal_container" style="display: none">
+          <div id="modal" style="position: absolute; left: 160px; top: 640px">
+              <span class="closebtn" onclick="toggleDialog()" style="color: white">Close</span>
+              <p2 style="color: white; position: absolute; left: 20px; top: 50px">
+                Ну как там с деньгами?
+              </p2>
+          </div>
+      </div>
+        <section class="news">
+          <article>
+              <nav>
+                  <ul style = "width: 2500px; height: 1000px;">
+                        <h2 style="position: absolute; left: 50px; top: 150px;">Обновления игры</h2>
+                  </ul>
+              </nav>
+              <nav class = "Update 1.54">
+                <img src="images/update1.54.jpg" alt="Обновление 1.54" loading="lazy" style="position: absolute; left: 50px; top: 220px; width: 960px; height: 540px">
+                <h2 style="position: absolute; left: 50px; top: 755px; width: 960px; height: 200px">
+                  В обновлении 1.54 была введена новая фура бренда "SCANIA"
+                </h2>
+              </nav>
+              <nav class = "Update 1.53">
+                <img src="images/update1.53.jpg" alt="Обновление 1.53" loading="lazy" style="position: absolute; left: 1060px; top: 220px; width: 960px; height: 540px">
+                <h2 style="position: absolute; left: 1060px; top: 755px; width: 960px; height: 200px">
+                  В обновлении 1.53 была введена новая фура бренда "DAF"
+                </h2>
+              </nav>
+          </article>
+      </section>
+      </section>
+    </main>
+    <section style= "position: absolute; top: 300px; left: 2050px">
+    <h1>Комментарии</h1>
+    <div>
+      <textarea id="commentInput" rows="4" cols="50" placeholder="Напишите ваш комментарий здесь..."></textarea><br>
+    <button id="submitComment" onclick="comment()">Отправить</button>
+  </div>
+  <div id="comments">
+      <h2>Список комментариев</h2>
+  </div>
+  </section>
+    <footer>
+      <p style="position: absolute; bottom: 50px; left: 50px">&copy;Euro Truck Simulator 2025. Все права защищены.</p>
+      <p style="position: absolute; bottom: 20px; left: 50px">Связь с нами: SCS-help@scs.com</p>
+  </footer>
+  </body>
+</html>
+
+
+

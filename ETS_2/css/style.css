@@ -1,0 +1,176 @@
+/*body {
+    background-image: url('images/background.png'); /* Укажите путь к вашему изображению 
+    background-size: cover; /* Растягиваем изображение на весь экран 
+    background-position: center; /* Центрируем изображение 
+    background-attachment: fixed; /* Фон остается фиксированным при прокрутке 
+}*/
+
+.logo {
+    width: 200px; /* Укажите нужный размер логотипа */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/*@media (max-width: 768px) {
+    .logo {
+        width: 150px;
+        top: 10px;
+        left: 10px;
+    }
+}*/
+
+.logo {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+/* Плавная подгрузка картинок */
+#Image {
+    opacity: 0;
+    transition: opacity 1.85s;
+}
+#Image.show {
+    opacity: 1;
+}
+/* Плавная подгрузка картинок */
+#Logo {
+    opacity: 0;
+    transition: opacity 2.5s;
+}
+#Logo.show {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Смена темы*/
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+.dark {
+    background-color: #333333;
+    color: #ffffff;
+}
+#themeToggle {
+    margin: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+/* система комментариев */
+body {
+    font-family: Arial, sans-serif;
+}
+#comments {
+    margin-top: 20px;
+}
+.comment {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* модальное окно */
+#modal_container
+{
+    position:absolute;
+    height: 100%;
+    width:100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+#modal
+{
+    position: absolute;
+    height: 200px;
+    width: 500px;
+    background: #b9b9b9;
+    border-radius: 10px;
+    margin: auto;
+    vertical-align: middle;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.closebtn
+{
+    position: absolute;
+    top:10px;
+    right:10px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal {
+    animation: fadeIn 0.5s ease-in-out;
+}
+/* стиль для кнопки из "ЧаВО"*/
+.button {
+    padding: 10px 50px;    
+    font-size: 16px;
+    color: white;
+    background-color: rgb(114, 114, 119);
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    padding: 10px 50px;
+    font-size: 18px;
+    background-color: rgb(114, 114, 119);
+}
+
+.button span {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+}
+
+.button:hover .text-1 {
+    opacity: 0;
+}
+
+.button:hover .text-2 {
+    opacity: 1;
+}
+
+.text-2 {
+    opacity: 0;
+}
+/* приближение картинок */
+.image-container {
+    overflow: hidden; /* Скрыть части изображения, выходящие за пределы контейнера */
+    width: 300px; /* Ширина контейнера */
+    height: 200px; /* Высота контейнера */
+}
+.image-container img {
+    width: 100%; /* Устанавливаем ширину 100% */
+    transition: transform 0.3s ease; /* Плавный переход при изменении размера */
+}
+.image-container:hover img {
+    transform: scale(1.2); /* Увеличение изображения при наведении */
+}
