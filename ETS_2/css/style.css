@@ -1,9 +1,7 @@
-/*body {
-    background-image: url('images/background.png'); /* Укажите путь к вашему изображению 
-    background-size: cover; /* Растягиваем изображение на весь экран 
-    background-position: center; /* Центрируем изображение 
-    background-attachment: fixed; /* Фон остается фиксированным при прокрутке 
-}*/
+/* плавный скролл*/ 
+html {
+    scroll-behavior: smooth;
+}
 
 .logo {
     width: 200px; /* Укажите нужный размер логотипа */
@@ -11,14 +9,6 @@
     top: 20px;
     left: 20px;
 }
-
-/*@media (max-width: 768px) {
-    .logo {
-        width: 150px;
-        top: 10px;
-        left: 10px;
-    }
-}*/
 
 .logo {
     opacity: 0;
@@ -28,7 +18,7 @@
 /* Плавная подгрузка картинок */
 #Image {
     opacity: 0;
-    transition: opacity 1.85s;
+    transition: opacity 4s;
 }
 #Image.show {
     opacity: 1;
@@ -55,7 +45,15 @@
 /* Смена темы*/
 body {
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.5s, color 0.5s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100vh;
 }
 .light {
     background-color: #ffffff;
@@ -65,15 +63,13 @@ body {
     background-color: #333333;
     color: #ffffff;
 }
-#themeToggle {
+#theme-toggle {
+    border-radius: 10px;
     margin: 20px;
-    padding: 10px 15px;
+    padding: 5px 10px;
     cursor: pointer;
 }
 /* система комментариев */
-body {
-    font-family: Arial, sans-serif;
-}
 #comments {
     margin-top: 20px;
 }
@@ -127,50 +123,200 @@ textarea {
 .modal {
     animation: fadeIn 0.5s ease-in-out;
 }
-/* стиль для кнопки из "ЧаВО"*/
-.button {
-    padding: 10px 50px;    
-    font-size: 16px;
-    color: white;
-    background-color: rgb(114, 114, 119);
-    border: none;
+/* FAQ */
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-theme .faq-item {
+    background-color: #444;
+    border-color: #666;
+}
+
+.faq-item:hover {
+    transform: scale(1.02); /* Увеличение при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
+
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-theme .faq-question {
+    color: #fff;
+}
+
+.faq-question:hover {
+    color: #ff5722; /* Изменение цвета при наведении */
+    transform: translateX(10px); /* Сдвиг вправо при наведении */
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+/* Анимация раскрытия ответа */
+.faq-answer.open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптация для темной темы */
+body.dark-theme::before,
+body.dark-theme::after {
+    background-color: #606060; /* Темно-серый цвет полос в темной теме */
+}
+
+/* Секции */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+/* FAQ */
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-theme .faq-item {
+    background-color: #444;
+    border-color: #666;
+}
+
+.faq-item:hover {
+    transform: scale(1.02); /* Увеличение при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
+
+.faq-question {
+    width: 920px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+body.dark-theme .faq-question {
+    color: #fff;
+}
+
+.faq-question:hover {
+    color: #ff5722; /* Изменение цвета при наведении */
+    transform: translateX(10px); /* Сдвиг вправо при наведении */
+}
+
+.faq-answer {
+    font-size: 19px;
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    max-width: 920px; /* задайте желаемую ширину */
+    word-wrap: break-word; /* позволяет переносить слова на новую строку */
+    overflow-wrap: break-word; /* поддержка для современных браузеров */
+}
+
+body.dark-theme .faq-answer {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Анимация раскрытия ответа */
+.faq-answer.open {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+/* подвал */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content {
+    flex: 1; /* Это позволяет контенту занимать всю доступную высоту */
+    padding: 20px; /* Отступы для контента */
+}
+footer {
+    background-color: #6d6d6d; /* Цвет фона подвала */
+    color: white; /* Цвет текста подвала */
+    text-align: center; /* Центрирование текста */
+    padding: 10px; /* Отступы для подвала */
+}
+/* настройки кнопок */
+#button{
+    text-decoration: none; /* Убирает подчеркивание */
+    color: black; /* Использует цвет текста родительского элемента */
+    border-radius: 10px;
+    margin: 20px;
+    padding: 5px 2px;
+    cursor: pointer;
+}
+a.button {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: black; /* Использует цвет текста родительского элемента */
+    border-radius: 10px;
+    margin: 20px;
+    padding: 5px 2px;
     cursor: pointer;
 }
 
-.button:hover {
-    padding: 10px 50px;
-    font-size: 18px;
-    background-color: rgb(114, 114, 119);
+#main-image {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.button span {
-    display: inline-block;
-    transition: opacity 0.3s ease;
+.thumbnails {
+    display: flex;
+    gap: 18px;
+    max-width: 2040px;
+    overflow: auto;
+    border-width: medium;
+    border-style: solid;
+    border-color: #333;
 }
-
-.button:hover .text-1 {
-    opacity: 0;
+.thumbnails img {
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
-
-.button:hover .text-2 {
-    opacity: 1;
-}
-
-.text-2 {
-    opacity: 0;
-}
-/* приближение картинок */
-.image-container {
-    overflow: hidden; /* Скрыть части изображения, выходящие за пределы контейнера */
-    width: 300px; /* Ширина контейнера */
-    height: 200px; /* Высота контейнера */
-}
-.image-container img {
-    width: 100%; /* Устанавливаем ширину 100% */
-    transition: transform 0.3s ease; /* Плавный переход при изменении размера */
-}
-.image-container:hover img {
-    transform: scale(1.2); /* Увеличение изображения при наведении */
+.thumbnails img:hover {
+    transform: scale(1.1);
 }

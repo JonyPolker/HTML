@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <link rel="icon" href="images/logo.png" type="ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Euro Truck Simulator 2
+    </title>
+    <link rel='stylesheet' href='css/style.css'>
+    <title>Смена темы</title>
+    </head>
+    <body class="light">
+    <main class="content">
+        <button id="theme-toggle" style="position: absolute; top: 50px; right: 40px; font-size:20px">Сменить тему</button>
+        <!--<script src="script.js"></script>-->
+        <section>
+            <button id="button" style="position: absolute; left: 180px; top: 50px; font-size: 18px"><a class ="button" href="index.html">Главная</a></button>
+            <button id="button" style="position: absolute; left: 310px; top: 50px; font-size: 18px"><a class ="button" href="news.html">Новости</a></button>
+            <button id="button" style="position: absolute; left: 440px; top: 50px; font-size: 18px"><a class ="button" href="about_us.html">О нас</a></button>
+            <button id="button" style="position: absolute; left: 550px; top: 50px; font-size: 18px"><a class ="button" href="faq.html">FAQ</a></button>
+            <button id="button" style="position: absolute; left: 650px; top: 50px; font-size: 18px"><a class ="button" href="galery.html">Галерея</a></button>
+            <img id="Logo" src="images/logo.png" style="position: absolute; width: 100px; height: 100px; left: 33px; top: 40px;" title="Euro Truck Simulator 2"/>
+        </section>
+        <section>
+          <img id="Image" src="images/screen7.png" alt="Обновление 1.54" loading="lazy" style="position: absolute; left: 1050px; top: 150px; width: 1366px; height: 768px">
+          <section style="position: absolute; top: 893px; left: 1040px; font-size:18px">
+            <h1>Связаться с нами:</h1>
+            <label style="position: relative; top: 18px; left: 12px">Имя: <input type="text" id="name" placeholder="Введите Ваше имя" style="font-size:16px"></label>
+            <label style="position: relative; top: 55px; right: 245px">Email: <input type="email" id="email" placeholder="example@example.com" style="font-size:16px"></label>
+          </section>
+            <h1 style="position: absolute; top: 930px; left: 1340px; font-size:24px">Сообщение:</h1>
+            <nav style="position: absolute; top: 970px; left: 1340px">
+              <textarea rows="5 " cols="52" id="message" placeholder="Напишите вашу сообщение здесь..." style="position: relative; top: 0px; left: 0px; font-size:18px"></textarea>
+              <nav style="position: relative; bottom: 25px; left: 190px">   
+                <button style="position: relative; top: 20px; right: 190px; font-size:17px" onclick="toggleDialog()">Отправить</button>
+                <div id="modal_container" style="display: none;">
+                  <div id="modal" style="position: absolute; bottom: 50px; left: 370px">
+                    <span class="closebtn" onclick="toggleDialog()" style="color: rgb(0, 0, 0)">&times;</span>
+                      <p3 style="color: rgb(0, 0, 0); position: absolute; left: 20px; top: 50px; font-size: 16px">
+                      Ваше обращение было принято.<br>
+                      Скоро Вам на него ответят.
+                      </p3>
+                  </div>
+                </div>
+                </nav>
+              </nav>
+                <p id="response"></p>  
+        </section>   
+        <section id="faq" style="position: absolute; top: 150px; left: 40px; font-size:18px">
+          <h2 style="position: relative; left: 10px; bottom: 8px">FAQ</h2>
+          <div class="faq-item" style="color: black">
+              <h3 class="faq-question">Какие минимальные системные требования?</h3>
+              <p class="faq-answer">Процессор: Intel Core i5-6400<br>ОЗУ: 8 GB RAM<br>Видеокарта: NVIDIA GeForce GTX 660<br>Накопитель: 25 ГБ свободного месте.</p>
+          </div>
+          <div class="faq-item" style="color: black">
+            <h3 class="faq-question">Как установить Euro Truck Simulator 2?</h3>
+            <p class="faq-answer"></p>
+        </div>
+          <div class="faq-item" style="color: black">
+              <h3 class="faq-question">Как быстро найти СТО?</h3>
+              <p class="faq-answer">Выйдите в меню, выберите «новые апгрейды», внизу кликните на кнопку «найти ближайшую СТО».<br>Маршрут будет добавлен в навигатор.</p>
+          </div>
+          <div class="faq-item" style="color: black">
+              <h3 class="faq-question">Как устанавливать моды на Euro Truck Simulator 2?</h3>
+              <p class="faq-answer">Скачиваете файл с расширением .scs и закидываете его в папку Документы/Euro Truck Simulator 2/mods.</p>
+          </div>
+          <div class="faq-item" style="color: black">
+            <h3 class="faq-question">Что дает шасси в Euro Truck Simulator 2?</h3>
+            <p class="faq-answer">Чем дороже шасси, тем более устойчив ваш грузовик на поворотах. Особенно это заметно при убранном лимите на скорость.</p>
+          </div>
+          <div class="faq-item" style="color: black">
+            <h3 class="faq-question">Что лучше — более продвинутое шасси или увеличенные топливные баки?</h3>
+            <p class="faq-answer">Шасси. При установке любого недефолтного шасси объем топливного бака падает до 800 литров, этого вполне хватает на один, даже затяжной рейс (с тяжелым грузом бака хватит примерно на 1420 километров). Так как заправки в игре встречаются часто, то лучше не перевернуться на крутом повороте, чем лишний раз заехать на заправку.</p>
+          </div>
+          <div class="faq-item" style="color: black">
+            <h3 class="faq-question">Я переустановил Windows, можно ли вернуть мой профиль?</h3>
+            <p class="faq-answer">Если ранее для своего профиля вы включили поддержку облака - просто установите игру и сейвы восстановятся. В противном случае - придётся начать сначала.</p>
+          </div>
+        </section>       
+    </main>
+    <footer>
+      © 2025 SCS Software. Все права защищены.
+    </footer>
+</body>
+<script>
+    window.onload = function() {
+    document.getElementById('Logo').classList.add('show');
+    document.getElementById('Image').classList.add('show');
+};
+</script>
+<script>
+  // Функция для переключения темы
+ function toggleTheme() {
+     document.body.classList.toggle('dark-theme');
+     const isDarkTheme = document.body.classList.contains('dark-theme');
+     localStorage.setItem('theme', isDarkTheme ? 'dark' : 'light'); // Сохраняем тему в localStorage
+     updateThemeButtonText(isDarkTheme);
+ }
+ 
+ // Функция для обновления текста кнопки переключения темы
+ function updateThemeButtonText(isDarkTheme) {
+     const themeToggle = document.getElementById('theme-toggle');
+     if (themeToggle) {
+         themeToggle.textContent = isDarkTheme ? 'Светлая тема' : 'Темная тема';
+     }
+ }
+ 
+ // Функция для загрузки темы из localStorage
+ function loadTheme() {
+     const savedTheme = localStorage.getItem('theme');
+     if (savedTheme === 'dark') {
+         document.body.classList.add('dark-theme');
+         updateThemeButtonText(true);
+     } else {
+         document.body.classList.remove('dark-theme');
+         updateThemeButtonText(false);
+     }
+ }
+ 
+ // Загружаем тему при загрузке страницы
+ document.addEventListener('DOMContentLoaded', () => {
+     loadTheme();
+ 
+     // Модальное окно
+     const logoLink = document.getElementById('logo-link');
+     const modal = document.getElementById('modal');
+     const closeModal = document.querySelector('.close');
+ 
+     if (logoLink && modal && closeModal) {
+         // Открыть модальное окно при клике на логотип
+         logoLink.addEventListener('click', (e) => {
+             e.preventDefault();
+             modal.style.display = 'block';
+         });
+ 
+         // Закрыть модальное окно при клике на крестик
+         closeModal.addEventListener('click', () => {
+             modal.style.display = 'none';
+         });
+ 
+         // Закрыть модальное окно при клике вне его
+         window.addEventListener('click', (e) => {
+             if (e.target === modal) {
+                 modal.style.display = 'none';
+             }
+         });
+     }
+ 
+     // Переключение темы
+     const themeToggle = document.getElementById('theme-toggle');
+     if (themeToggle) {
+         themeToggle.addEventListener('click', toggleTheme);
+     }
+ 
+     // Галерея изображений
+     const galleryImages = document.querySelectorAll('.gallery-image');
+     const imageModal = document.getElementById('image-modal');
+     const expandedImg = document.getElementById('expanded-img');
+ 
+     if (galleryImages.length > 0 && imageModal && expandedImg) {
+         galleryImages.forEach(img => {
+             img.addEventListener('click', () => {
+                 imageModal.style.display = 'block';
+                 expandedImg.src = img.src;
+             });
+         });
+ 
+         // Закрыть модальное окно галереи
+         imageModal.querySelector('.close').addEventListener('click', () => {
+             imageModal.style.display = 'none';
+         });
+     }
+ 
+     // FAQ - Раскрытие ответов при клике на вопрос
+     const faqQuestions = document.querySelectorAll('.faq-question');
+ 
+     if (faqQuestions.length > 0) {
+         faqQuestions.forEach(question => {
+             question.addEventListener('click', () => {
+                 const answer = question.nextElementSibling; // Находим следующий элемент (ответ)
+                 if (answer.classList.contains('open')) {
+                     answer.classList.remove('open'); // Скрываем ответ, если он уже открыт
+                     setTimeout(() => {
+                         answer.style.display = 'none'; // Убираем display после завершения анимации
+                     }, 300); // Время анимации (0.3s)
+                 } else {
+                     answer.style.display = 'block'; // Показываем ответ перед началом анимации
+                     setTimeout(() => {
+                         answer.classList.add('open'); // Запускаем анимацию раскрытия
+                     }, 10); // Небольшая задержка для корректного отображения
+                 }
+             });
+         });
+     }
+ });
+ function toggleDialog()
+{
+    var dialog = document.getElementById("modal_container");
+    dialog.style.display = (dialog.style.display=="none"?"block":"none");
+}
+ </script>
+</html>
